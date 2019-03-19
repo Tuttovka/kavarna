@@ -7,7 +7,32 @@
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
+    <header>
+        <img src="/svg/logo.svg" alt="Generic Hipster Coffee" class="w-25" />
+
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/menu">Menu</a></li>
+            <li><a href="/coffee">Coffee</a></li>
+            <li><a href="/our-story">Our Story</a></li>
+        </ul>
+    </header>
+
 {% block content %}{% endblock %}
+
+    <footer>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/menu">Menu</a></li>
+            <li><a href="/coffee">Coffee</a></li>
+            <li><a href="/our-story">Our Story</a></li>
+        </ul>
+
+        <p>#hipstersmakecoffee</p>
+
+        <p>Follow us on <a href="https://www.twitter.com">Twitter</a> and <a href="https://www.instagram.com">Instagram </a> </p>
+    </footer>   
+
 {#
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS and your own script at the end -->
@@ -16,5 +41,6 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="js/custom.js"></script>
 #}
+
 </body>
 </html>
