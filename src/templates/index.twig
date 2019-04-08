@@ -1,34 +1,41 @@
 {% extends '_base.twig' %}
 
-
-{% block title %}Index page{% endblock %}
-
+{% block title %}Index page
+{% endblock %}
 
 {% block content %}
-    <div>
-        <h1>Generic Hipster Coffee</h1>
-        <h2>Specialty coffee, fresh food &amp; local community.</h2>
-        <img src="/img/counter.jpg" alt="Interier of Generic Hipster Coffee" class="w-25" />
-    </div>
+    <div class="container">
+        <div>
+            <h1>Generic Hipster Coffee</h1>
+            <h2>Specialty coffee, fresh food &amp; local community.</h2>
+        </div>
 
-    <div>
-        <h3>Opening Hours</h3>
-        <p>sunday to thursday: 8 am to 11 pm</p>
-        <p>friday to saturday: 8 am to 1 am</p>
-    </div>
+        <div>
+            <img alt="Interier of Generic Hipster Coffee" class="img-fluid" src="/img/counter.jpg"/>
+        </div>
 
-    <div>
-        <h3>Book a table</h3>
-        <p>Call <a href="tel:+14153214567">+1 415-321-4567</a></p>
-    </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-4">
+                <h3>Opening Hours</h3>
+                <p>sunday to thursday: 8 am to 11 pm</p>
+                <p>friday to saturday: 8 am to 1 am</p>
+            </div>
 
-    <div>
-        <h3>Address</h3>
-        <p>321 Ivy St.<br>San&nbsp;Francisco, CA 94102</p>
-    </div>
+            <div class="col-md-6 col-lg-4">
+                <h3>Book a table</h3>
+                <p>Call
+                    <a href="tel:+14153214567">+1 415-321-4567</a>
+                </p>
+            </div>
 
-    <div>
-        <a href="https://www.google.com/maps">Mapa</a>
-    </div>
+            <div class="col-md-12 col-lg-4">
+                <h3>Address</h3>
+                <p>321 Ivy St.<br>San&nbsp;Francisco, CA 94102</p>
+            </div>
+        </div>
 
+        <div>
+            <a href="https://www.google.com/maps">Mapa</a>
+        </div>
+    </div>
 {% endblock %}
