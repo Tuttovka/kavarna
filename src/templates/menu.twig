@@ -1,7 +1,11 @@
 {% extends '_base.twig' %}
 
-{% block title %}Index page
+
+{% block title %}
+    Menu –
+    {{ parent() }}
 {% endblock %}
+
 
 {% block content %}
     <div class="container">
@@ -308,7 +312,7 @@
         </div>
 
         <div>
-            <img alt="Espreso machine" class="img-fluid" src="/img/espresso-machine-detail.jpg"/>
+            <img alt="Espreso machine" class="img-fluid" src="/img/espresso-machine-detail.jpg" />
         </div>
     </div>
 {% endblock %}
