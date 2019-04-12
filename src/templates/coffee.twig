@@ -3,32 +3,8 @@
 {% block title %}Index page
 {% endblock %}
 
+
 {% block content %}
-    <div class="container mb-4">
-
-        <div class="row">
-            {% for coffee in coffees %}
-                <div class="col-md-6 mb-4">
-                    <div class="card bg-light border-light rounded-0">
-                        <div class="card-header">
-                            <h3 class="card-title">{{coffee.name}}
-                                ({{coffee.country}})</h3>
-                        </div>
-                        <img alt="" class="card-img img-fluid rounded-0" src="{{coffee.img}}" />
-                        <div class="card-body pb-4">
-
-                            <p class="card-text font-italic">
-                                {{ coffee.taste|join(' / ') }}
-                            </p>
-                            <p class="card-text">{{coffee.info}}</p>
-                        </div>
-                    </div>
-                </div>
-
-                <pre>{{ dump(coffee) }}</pre>
-            </div>
-        {% endfor %}
-    </div>
 
     <div>
         <h1>Coffee</h1>
@@ -36,18 +12,28 @@
         <p>You can currently buy these beans in 350g bags</p>
     </div>
 
-    <div class="row">
-        <div class="col-md-6 mb-4">
-            <div class="card bg-light border-light rounded-0">
-                <div class="card-header">
-                    <h3 class="card-title">Quejina (Guatemala)</h3>
+    <div class="container mb-4">
+        <div class="row">
+            {% for coffee in coffees %}
+                <div class="col-md-6 mb-4">
+                    <div class="card bg-light border-light rounded-0 h-100">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                {{coffee.name}}
+                                ({{coffee.country}})
+                            </h3>
+                        </div>
+                        <img alt="" class="card-img img-fluid rounded-0" src="{{coffee.img}}" />
+                        <div class="card-body pb-4">
+                            <p class="card-text font-italic">
+                                {{ coffee.taste|join(' / ') }}
+                            </p>
+                            <p class="card-text">{{coffee.info}}</p>
+                        </div>
+                    </div>
                 </div>
-                <img alt="" class="card-img img-fluid rounded-0" src="img\coffee\Coffee-SQUARE.jpg" />
-                <div class="card-body pb-4">
-                    <p class="card-text font-italic">redcurrant/honeysuckle/juicy</p>
-                    <p class="card-text">Fruity redcurrant and sweet honeysuckle flavours. An incredibly juicy coffee which we struggled to decide on the right berry descriptor, but raspberry, blackberry and blueberry were also in the running!</p>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
+
 </div>{% endblock %}
