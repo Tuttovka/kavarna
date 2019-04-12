@@ -26,7 +26,7 @@ gulp.task(
             // compile twig templates to html files
             return gulp
                 .src("src/templates/**/[^_]*.twig")
-                .pipe(twig({ data: JSON.parse(fs.readFileSync("src/templates/data.json")) })) // import from data.json
+                .pipe(twig({ data: JSON.parse(fs.readFileSync("src/data.json")) })) // import from data.json
                 .pipe(gulp.dest("./dist/")) // where to put compiled html
                 .on("end", function() {
                     // after compilation finishes…
@@ -145,7 +145,7 @@ gulp.task(
         return surge({
             project: "dist",
             // change to your domain
-            domain: "https://mkghc.surge.sh"
+            domain: "https://my-hipster-cafe.surge.sh"
             // note 1: URL must end .surge.sh if you haven’t bought yours and configured DNS
             // note 2: https for custom domains is a paid feature
         });
