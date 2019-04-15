@@ -1,0 +1,17 @@
+.ghc-nav-link-top{
+    text-decoration: none;
+}
+
+.ghc-nav-link-bottom {
+    color: hsl(204, 100%, 50%);
+}
+
+.ghc-nav-link-bottom:hover {
+    color: hsl(211, 100%, 35%);
+}
+
+.active > .ghc-nav-link-bottom {
+    color: hsl(210, 14%, 83%);
+    text-decoration: none;
+}
+
