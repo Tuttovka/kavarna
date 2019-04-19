@@ -1,0 +1,22 @@
+body {
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.ghc-nav-link {
+    &-top {
+        text-decoration: none;
+    }
+
+    &-bottom {
+        color: hsl(204, 100%, 50%);
+
+        &:hover {
+            color: hsl(211, 100%, 35%);
+        }
+
+        .active > & {
+            color: hsl(210, 14%, 83%);
+            text-decoration: none;
+        }
+    }
+}

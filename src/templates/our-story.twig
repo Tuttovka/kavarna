@@ -1,18 +1,22 @@
 {% extends '_base.twig' %}
 
-{% block title %}Index page
+
+{% block title %}
+Our Story – {{ parent() }}
 {% endblock %}
+
+{% block activeItemOurStory %} active {% endblock %}
 
 {% block content %}
     <div class="container">
         <div>
             <h1>Our story</h1>
-            <p>GHC started as a project of two friends and passionate baristas, John &amp; Don in 2010. 
+            <p>GHC started as a project of two friends and passionate baristas, John &amp; Don in 2010.
                 Believing as much in the hand of an educated barista as in the innovative equipment of the our ever-growing industry, GHC offers a full spectrum of brewing opportunities – from pour overs to syphon pots to finely executed espresso beverages. Each cup of coffee is made with love, precision and care.
             </p>
         </div>
         <div>
-            <img alt="" class="img-fluid" src="/img/espresso-machine.jpg"/>
+            <img alt="" class="img-fluid mb-n5" src="/img/espresso-machine.jpg"/>
         </div>
     </div>
 {% endblock %}
