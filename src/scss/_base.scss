@@ -4,7 +4,6 @@
     }
 
     &-bottom {
-
         &:hover {
             text-decoration: none;
         }
@@ -15,13 +14,33 @@
     }
 }
 
-.h1, .h2, .h3, .h4, .h5, .h6,
-h1, h2, h3, h4, h5, h6 {
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     letter-spacing: 0.07em;
     text-transform: uppercase;
     margin-top: 1em;
 }
 
-[href^=tel] {
+[href^="tel"] {
     color: black;
+}
+
+.ghc-logo {
+    width: 100px;
+    height: 100px;
+
+    @include media-breakpoint-up(md) {
+        width: 150px;
+        height: 150px;
+    }
 }
