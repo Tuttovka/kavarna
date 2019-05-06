@@ -3,14 +3,9 @@
         text-decoration: none;
     }
 
-    &-bottom {
-        &:hover {
-            text-decoration: none;
-        }
-        .active > & {
-            color: $text-muted;
-            text-decoration: none;
-        }
+    &-bottom .active > & {
+        color: $text-muted;
+        text-decoration: none;
     }
 }
 
@@ -31,7 +26,8 @@ h6 {
     margin-top: 0.9em;
 }
 
-.h1, h1{
+.h1,
+h1 {
     margin-bottom: 0.8rem;
 }
 
