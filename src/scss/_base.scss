@@ -1,22 +1,46 @@
-body {
-    font-family: "Roboto Condensed", sans-serif;
-}
-
 .ghc-nav-link {
     &-top {
         text-decoration: none;
     }
 
-    &-bottom {
-        color: hsl(204, 100%, 50%);
+    &-bottom .active > & {
+        color: $text-muted;
+        text-decoration: none;
+    }
+}
 
-        &:hover {
-            color: hsl(211, 100%, 35%);
-        }
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    margin-top: 0.9em;
+}
 
-        .active > & {
-            color: hsl(210, 14%, 83%);
-            text-decoration: none;
-        }
+.h1,
+h1 {
+    margin-bottom: 0.8rem;
+}
+
+[href^="tel:"] {
+    color: black;
+}
+
+.ghc-logo {
+    width: 100px;
+    height: 100px;
+
+    @include media-breakpoint-up(md) {
+        width: 150px;
+        height: 150px;
     }
 }
