@@ -28,10 +28,14 @@ h5,
 h6 {
     letter-spacing: 0.07em;
     text-transform: uppercase;
-    margin-top: 1em;
+    margin-top: 0.9em;
 }
 
-[href^="tel"] {
+.h1, h1{
+    margin-bottom: 0.8rem;
+}
+
+[href^="tel:"] {
     color: black;
 }
 
