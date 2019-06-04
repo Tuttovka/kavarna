@@ -22,6 +22,7 @@
                         <input class="form-control" id="inputName" name="Name" placeholder="John Hipster" required type="text">
                     </div>
                 </div>
+
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputPhone">Phone</label>
@@ -47,32 +48,62 @@
                 </div>
 
                 <div class="form-row">
-                    <div class="form-group col-md-3">
-                        <label for="inputSeats">Number of seats</label>
-                        <select class="form-control" id="inputSeats" name="Seats" required>
-                            <option selected>Choose…</option>
-                            <option value="1 seat">1</option>
-                            <option value="2 seats">2</option>
-                            <option value="3 seats">3</option>
-                            <option value="4 seats">4</option>
-                            <option value="5 seats">5</option>
-                        </select>
-                    </div>
+                    <fieldset class="form-group col">
+                        <div>
+                            <label class="col-form-label pt-0">Number of seats</label>
+                        </div>
+
+                        <div class="">
+                            <div class="form-check">
+                                <input checked class="form-check-input" id="gridRadios1" name="Seats" type="radio" value="one">
+                                <label class="form-check-label" for="gridRadios1">
+                                    One seat
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" id="gridRadios2" name="Seats" type="radio" value="two">
+                                <label class="form-check-label" for="gridRadios2">
+                                    Two seats
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" id="gridRadios3" name="Seats" type="radio" value="three">
+                                <label class="form-check-label" for="gridRadios3">
+                                    Three seats
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" id="gridRadios4" name="Seats" type="radio" value="four">
+                                <label class="form-check-label" for="gridRadios4">
+                                    Four seats
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" id="gridRadios5" name="Seats" type="radio" value="five">
+                                <label class="form-check-label" for="gridRadios5">
+                                    Five seats
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
                 </div>
+
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputNote">Note</label>
                         <textarea class="form-control" id="inputNote" name="Note" rows="3"></textarea>
                     </div>
                 </div>
+
                 <div class="form-check mb-5">
                     <input class="form-check-input" id="gridCheck" name="Agreement" required type="checkbox">
                     <label class="form-check-label" for="gridCheck">
                         I agree to the processing of personal data
                     </label>
                 </div>
+
                 <button class="btn btn-primary btn-lg" type="submit">Send</button>
-                <input type="hidden" name="_next" value="https://fictive-hipster-cafe.surge.sh/reservation-send"/>
+                <input name="_next" type="hidden" value="https://fictive-hipster-cafe.surge.sh/reservation-send"/>
             </form>
         </div>
     </div>
