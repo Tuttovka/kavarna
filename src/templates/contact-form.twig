@@ -1,0 +1,132 @@
+{% extends '_base.twig' %}
+
+{% block title %}
+    Booking –
+    {{ parent() }}
+{% endblock %}
+
+{% block activeItemBooking %}
+    active
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+            <form action="https://formspree.io/makazda90@gmail.com" class="mb-5 col-md-8" method="POST">
+                <h1>Booking</h1>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputName">Name</label>
+                        <input class="form-control" id="inputName" name="Name" placeholder="John Hipster" type="text" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputPhone">Phone</label>
+                        <input class="form-control" id="inputPhone" name="Phone" placeholder="Phone number" required type="text">
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="inputE-mail">E-mail</label>
+                        <input class="form-control" id="inputE-mail" name="E-mail" placeholder="john.hipster@gmail.com" required type="email">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputDate">Date</label>
+                        <input class="form-control" id="inputDate" name="Date" required type="date">
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="inputTime">Time</label>
+                        <input class="form-control" id="inputTime" name="Time" required type="time">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <fieldset class="form-group col">
+                        <div>
+                            <label class="col-form-label pt-0">Number of seats</label>
+                        </div>
+
+                        <div class="">
+                            <div class="form-check">
+                                <input class="form-check-input" id="gridRadios1" name="Seats" type="radio" value="one">
+                                <label class="form-check-label" for="gridRadios1">
+                                    One seat
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" id="gridRadios2" name="Seats" type="radio" value="two">
+                                <label class="form-check-label" for="gridRadios2">
+                                    Two seats
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" id="gridRadios3" name="Seats" type="radio" value="three">
+                                <label class="form-check-label" for="gridRadios3">
+                                    Three seats
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" id="gridRadios4" name="Seats" type="radio" value="four">
+                                <label class="form-check-label" for="gridRadios4">
+                                    Four seats
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" id="gridRadios5" name="Seats" type="radio" value="five">
+                                <label class="form-check-label" for="gridRadios5">
+                                    Five seats
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputNote">Note</label>
+                        <textarea class="form-control" id="inputNote" name="Note" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-check mb-5">
+                    <input class="form-check-input" id="gridCheck" name="Agreement" required type="checkbox">
+                    <label class="form-check-label" for="gridCheck">
+                        I agree to the processing of personal data
+                    </label>
+                </div>
+
+                <button class="btn btn-primary btn-lg" type="submit">Send</button>
+                <input name="_next" type="hidden" value="https://fictive-hipster-cafe.surge.sh/reservation-send"/>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        var phoneSearch = document.getElementById("inputPhone"); // definice funkce, ktera v documentu najde element podle Id
+        var mailSearch = document.getElementById("inputE-mail");
+
+        function setRequired() {
+            var phoneCheck = phoneSearch.value;
+            var mailCheck = mailSearch.value;
+
+            if (phoneCheck || mailCheck) {
+                phoneSearch.removeAttribute("required"); //odebira atribut required, pokud je jedno z poli vyplnenych
+                mailSearch.removeAttribute("required");
+            } else {
+                phoneSearch.setAttribute("required", "true"); //hodnota atributu required muze byt tez ""
+                mailSearch.setAttribute("required", "true");
+            }
+        }
+
+        phoneSearch.addEventListener("input", setRequired);
+        mailSearch.addEventListener("input", setRequired);
+    </script>
+
+{% endblock %}

@@ -14,64 +14,70 @@
     </head>
 
     <body>
+        <div class="d-flex flex-column" style="min-height: 100vh">
+            <div class="bg-light">
+                <header class="container px-0">
 
-        <div class="bg-light">
-            <header class="container px-0">
+                    <nav class="navbar navbar-expand navbar-light justify-content-center flex-column justify-content-md-between flex-md-row p-0">
+                        <a class="navbar-brand mr-0 py-3" href="/"><img alt="Generic Hipster Coffee" class="d-block mx-auto ghc-logo" src="/svg/logo.svg"/></a>
+                        <ul class="navbar-nav">
+                            <li class="nav-item mx-0 mx-sm-2 mr-md-0 ml-md-4">
+                                <a class="nav-link ghc-nav-link-top {% block activeItemHome %}{% endblock %}" href="/">Home
+                                </a>
+                            </li>
+                            <li class="nav-item mx-0 mx-sm-2 mr-md-0 ml-md-4 {% block activeItemMenu %}{% endblock %}">
+                                <a class="nav-link ghc-nav-link-top" href="/menu">Menu</a>
+                            </li>
+                            <li class="nav-item mx-0 mx-sm-2 mr-md-0 ml-md-4 {% block activeItemCoffee %}{% endblock %}">
+                                <a class="nav-link ghc-nav-link-top" href="/coffee">Coffee</a>
+                            </li>
+                            <li class="nav-item mx-0 mx-sm-2 mr-md-0 ml-md-4 {% block activeItemOurStory %}{% endblock %}">
+                                <a class="nav-link ghc-nav-link-top" href="/our-story">Our Story</a>
+                            </li>
+                            <li class="nav-item mx-0 mx-sm-2 mr-md-0 ml-md-4 {% block activeItemBooking %}{% endblock %}">
+                                <a class="nav-link ghc-nav-link-top" href="/contact-form">Booking</a>
+                            </li>
+                        </ul>
+                    </nav>
 
-                <nav class="navbar navbar-expand navbar-light justify-content-center flex-column justify-content-md-between flex-md-row p-0">
-                    <a class="navbar-brand mr-0 py-3" href="/"><img alt="Generic Hipster Coffee" class="d-block mx-auto ghc-logo" src="/svg/logo.svg"/></a>
-                    <ul class="navbar-nav">
-                        <li class="nav-item mx-0 mx-sm-2 mr-md-0 ml-md-4">
-                            <a class="nav-link ghc-nav-link-top {% block activeItemHome %}{% endblock %}" href="/">Home
-                            </a>
+                </header>
+
+            </div>
+
+            {% block content %}{% endblock %}
+
+
+            <div class="bg-dark py-3 text-center mt-auto">
+                <footer class="container px-0">
+
+                    <ul class="nav justify-content-center my-5">
+                        <li class="nav-item mt-2 mx-0 mx-sm-1 mx-md-2 {% block activeItemHome %}{% endblock %}">
+                            <a class="nav-link ghc-nav-link-bottom px-md-3" href="/">Home</a>
                         </li>
-                        <li class="nav-item mx-0 mx-sm-2 mr-md-0 ml-md-4 {% block activeItemMenu %}{% endblock %}">
-                            <a class="nav-link ghc-nav-link-top" href="/menu">Menu</a>
+                        <li class="nav-item mt-2 mx-0 mx-sm-1 mx-md-2 {% block activeItemMenu %}{% endblock %}">
+                            <a class="nav-link ghc-nav-link-bottom px-md-3" href="/menu">Menu</a>
                         </li>
-                        <li class="nav-item mx-0 mx-sm-2 mr-md-0 ml-md-4 {% block activeItemCoffee %}{% endblock %}">
-                            <a class="nav-link ghc-nav-link-top" href="/coffee">Coffee</a>
+                        <li class="nav-item mt-2 mx-0 mx-sm-1 mx-md-2 {% block activeItemCoffee %}{% endblock %}">
+                            <a class="nav-link ghc-nav-link-bottom px-md-3" href="/coffee">Coffee</a>
                         </li>
-                        <li class="nav-item mx-0 mx-sm-2 mr-md-0 ml-md-4 {% block activeItemOurStory %}{% endblock %}">
-                            <a class="nav-link ghc-nav-link-top" href="/our-story">Our Story</a>
+                        <li class="nav-item mt-2 mx-0 mx-sm-1 mx-md-2 {% block activeItemOurStory %}{% endblock %}">
+                            <a class="nav-link ghc-nav-link-bottom px-md-3" href="/our-story">Our Story</a>
+                        </li>
+                        <li class="nav-item mt-2 mx-0 mx-sm-1 mx-md-2 {% block activeItemBooking %}{% endblock %}">
+                            <a class="nav-link ghc-nav-link-bottom px-md-3" href="/contact-form">Booking</a>
                         </li>
                     </ul>
-                </nav>
 
-            </header>
+                    <p class="text-light h5 font-weight-bold mt-3 pt-4">#hipstersmakecoffee</p>
 
+                    <p class="text-light mb-5">Follow us on
+                        <a class="ghc-nav-link-bottom" href="https://www.twitter.com">Twitter</a>
+                        and
+                        <a class="ghc-nav-link-bottom" href="https://www.instagram.com">Instagram</a>
+                    </p>
+
+                </footer>
+            </div>
         </div>
-
-        {% block content %}{% endblock %}
-
-
-        <div class="bg-dark py-3 text-center">
-            <footer class="container px-0">
-
-                <ul class="nav justify-content-center my-5">
-                    <li class="nav-item mt-2 mx-0 mx-sm-1 mx-md-2 {% block activeItemHome %}{% endblock %}">
-                        <a class="nav-link ghc-nav-link-bottom px-md-3" href="/">Home</a>
-                    </li>
-                    <li class="nav-item mt-2 mx-0 mx-sm-1 mx-md-2 {% block activeItemMenu %}{% endblock %}">
-                        <a class="nav-link ghc-nav-link-bottom px-md-3" href="/menu">Menu</a>
-                    </li>
-                    <li class="nav-item mt-2 mx-0 mx-sm-1 mx-md-2 {% block activeItemCoffee %}{% endblock %}">
-                        <a class="nav-link ghc-nav-link-bottom px-md-3" href="/coffee">Coffee</a>
-                    </li>
-                    <li class="nav-item mt-2 mx-0 mx-sm-1 mx-md-2 {% block activeItemOurStory %}{% endblock %}">
-                        <a class="nav-link ghc-nav-link-bottom px-md-3" href="/our-story">Our Story</a>
-                    </li>
-                </ul>
-
-                <p class="text-light h5 font-weight-bold mt-3 pt-4">#hipstersmakecoffee</p>
-
-                <p class="text-light mb-5">Follow us on
-                    <a class="ghc-nav-link-bottom" href="https://www.twitter.com">Twitter</a>
-                    and
-                    <a class="ghc-nav-link-bottom" href="https://www.instagram.com">Instagram</a>
-                </p>
-
-            </footer>
-        </div>
-
     </body>
 </html>
